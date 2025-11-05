@@ -11,7 +11,5 @@ fn main() {
     {
         panic!("At most one BLAS implementation may be enabled at a time.");
     }
-    if std::env::var("CARGO_FEATURE_ACCELERATE").is_ok() {
-        println!("cargo:rustc-link-lib=framework=Accelerate");
-    }
+    println!("cargo:rustc-link-lib=framework=Accelerate");
 }
